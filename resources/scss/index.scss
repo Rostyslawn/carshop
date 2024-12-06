@@ -1,0 +1,104 @@
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.non-auth {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input, button {
+            margin: 10px 0;
+        }
+
+        .login, .password {
+            width: 250px;
+        }
+
+        * {
+            padding: 10px;
+        }
+    }
+}
+
+
+.auth-success {
+    h1 {
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+
+        .search-input {
+            font-size: 18px;
+            border: 1px solid black ;
+            width: 500px;
+            height: 45px;
+        }
+    }
+}
+
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: #E9EAEB;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    * {
+        margin: 5px 0;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        width: 200px;
+    }
+}
+
+.logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    button {
+        width: 150px;
+        height: 25px;
+    }
+}
+
+.message {
+    padding: 10px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.success {
+    color: White;
+    background: green;
+}
+
+.error {
+    color: White;
+    background: red;
+}
