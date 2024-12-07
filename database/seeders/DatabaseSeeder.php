@@ -13,8 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // УДАЛИТЬ
-        $this->call(UsersSeeder::class);
+//        $this->call(UsersSeeder::class);
 //        $this->call(ProductsSeeder::class);
     }
 }

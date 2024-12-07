@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\products;
-use Database\Seeders\ProductsSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -14,9 +12,14 @@ class ImportController extends Controller
     {
         $file = $request->file("file");
 
+        ini_set('memory_limit', '2048M');
+        ini_set('max_execution_time', '300');
+        ini_set('upload_max_filesize', '50M');
+        ini_set('post_max_size', '50M');
+
         if(!$file) return redirect("/")->with('error', 'Ошибка при обработке файла');
 
-        products::query()->delete();
+//        products::query()->delete();
 
         $spreadsheet = IOFactory::load($file->getPathname());
         $sheet = $spreadsheet->getActiveSheet();
