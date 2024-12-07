@@ -17,11 +17,12 @@
     <div class="grid grid-line-5"></div>
 </div>
 <div class="header">
-    <div class="main-logo"><img src="{{ asset('images/art_invest_logo.webp') }}" alt="art_invest_logo"></div>
+    <div class="main-logo"><a href="{{ route("index") }}"><img src="{{ asset('images/art_invest_logo.webp') }}"
+                                                               alt="art_invest_logo"></a></div>
     <div class="nav">
         <div class="item"><a href="{{ route("index") }}">GŁÓWNA</a></div>
-        <div class="item">WSPÓŁPRACA</div>
-        <div class="item">KONTAKT</div>
+        <div class="item"><a href="{{ route("about") }}">WSPÓŁPRACA</a></div>
+        <div class="item"><a href="{{ route("contact") }}">KONTAKT</a></div>
     </div>
     <div class="ocp">Original car parts</div>
     <div class="logo">

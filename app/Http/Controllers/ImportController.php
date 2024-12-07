@@ -32,7 +32,7 @@ class ImportController extends Controller
                 'product_id' => $row["A"],
                 'name' => $row["B"],
                 'price' => (float) $row["C"],
-                'wholesale' => (float) $row["D"],
+                'wholesale' => isset($row["D"]) ? (float) $row["D"] : null,
                 'created_at' => now(),
                 'updated_at' => now(),
             ];

@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string("product_id");
             $table->string("name");
-            $table->float("price");
-            $table->float("wholesale");
+            $table->float("price")->nullable();
+            $table->float("wholesale")->nullable();
             $table->timestamps();
         });
     }
