@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 a {
     color: black;
     cursor: pointer;
@@ -6,6 +11,155 @@ a {
 
 button {
     cursor: pointer;
+}
+
+body {
+    color: #ffffff;
+}
+
+.grid-lines {
+    vertical-align: baseline;
+    background-image: linear-gradient(135deg, #2d3393, #22bcdc);
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+
+    .grid {
+        position: absolute;
+        top: -50%;
+        width: 1px;
+        height: 60px;
+        background-color: white;
+        animation: fall 10s linear infinite;
+    }
+
+    .grid-line-1 {
+        left: 10%;
+        animation-delay: 1s;
+    }
+
+    .grid-line-2 {
+        left: 30%;
+        animation-delay: 4s;
+    }
+
+    .grid-line-3 {
+        left: 50%;
+        animation-delay: 7s;
+    }
+
+    .grid-line-4 {
+        left: 70%;
+        animation-delay: 10s;
+    }
+
+    .grid-line-5 {
+        left: 90%;
+        animation-delay: 13s;
+    }
+
+    @keyframes fall {
+        0% {
+            top: -50px;
+        }
+        100% {
+            top: 100%;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main-logo {
+        width: 200px;
+        height: 50px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .nav {
+        font-weight: 500;
+        display: flex;
+        margin: 30px 0;
+
+        .item {
+            a {
+                color: white;
+            }
+
+            cursor: pointer;
+            margin: 0 15px;
+            position: relative;
+
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                background-color: #22bcdc;
+                transition: width 0.5s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    .ocp {
+        margin: 30px 0;
+        font-size: 24px;
+        font-weight: 550;
+    }
+
+    .logo {
+        margin-bottom: 50px;
+
+        .up, .down {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 20px;
+            padding: 10px 0;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &.audi {
+                width: 200px;
+                height: 80px;
+            }
+
+            &.mini {
+                width: 150px;
+                height: 70px;
+            }
+        }
+    }
 }
 
 .non-auth {
@@ -40,16 +194,29 @@ button {
     .search {
         display: flex;
         justify-content: center;
+        margin: 15px 0;
 
         .search-input {
             font-size: 18px;
-            border: 1px solid black ;
+            box-sizing: border-box;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 1px solid black;
             width: 500px;
             height: 45px;
+            padding-left: 10px;
+            margin: 0;
         }
 
         button {
+            font-size: 18px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 45px;
             width: 100px;
+            margin: 0;
+            border: 1px solid black;
+            border-left: none;
         }
     }
 }
@@ -65,20 +232,24 @@ button {
         flex-direction: column;
         justify-content: center;
         padding: 10px;
-        border: 1px solid black;
+        border: 1px solid white;
         width: 300px;
     }
 }
 
 .admin-panel {
+    a {
+        color: white;
+    }
+
+    border: 1px solid white;
     display: flex;
     flex-direction: column;
     width: 300px;
-    background: #E9EAEB;
     padding: 10px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 15%;
 
     * {
         margin: 5px 0;
@@ -94,12 +265,35 @@ button {
     }
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10%;
+
+    .white-line {
+        width: 60%;
+        height: 2px;
+        background-color: white;
+        margin: 0 auto;
+    }
+
+    span {
+        margin-top: 25px;
+        font-size: 16px;
+        color: white;
+    }
+}
+
 .logout {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15%;
 
     button {
+        padding: 5px;
         width: 150px;
     }
 }

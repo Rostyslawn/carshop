@@ -5,10 +5,53 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main page</title>
+    <title>Original Car Parts</title>
     @vite("resources/scss/index.scss")
 </head>
 <body>
+<div class="grid-lines">
+    <div class="grid grid-line-1"></div>
+    <div class="grid grid-line-2"></div>
+    <div class="grid grid-line-3"></div>
+    <div class="grid grid-line-4"></div>
+    <div class="grid grid-line-5"></div>
+</div>
+<div class="header">
+    <div class="main-logo"><img src="{{ asset('images/art_invest_logo.webp') }}" alt="art_invest_logo"></div>
+    <div class="nav">
+        <div class="item"><a href="{{ route("index") }}">GŁÓWNA</a></div>
+        <div class="item">WSPÓŁPRACA</div>
+        <div class="item">KONTAKT</div>
+    </div>
+    <div class="ocp">Original car parts</div>
+    <div class="logo">
+        <div class="up">
+            <div class="item vw">
+                <img src="{{ asset('images/vw.png') }}" alt="volkswagen">
+            </div>
+            <div class="item audi">
+                <img src="{{ asset('images/audi.png') }}" alt="audi">
+            </div>
+            <div class="item skoda">
+                <img src="{{ asset('images/skoda.png') }}" alt="skoda">
+            </div>
+        </div>
+        <div class="down">
+            <div class="item bmw">
+                <img src="{{ asset('images/bmw.png') }}" alt="bmw">
+            </div>
+            <div class="item mini">
+                <img src="{{ asset('images/bmw-mini.png') }}" alt="mini-cooper">
+            </div>
+            <div class="item mercedes">
+                <img src="{{ asset('images/mercedes.png') }}" alt="mercedes">
+            </div>
+            <div class="item smart">
+                <img src="{{ asset('images/smart.png') }}" alt="mercedes-smart">
+            </div>
+        </div>
+    </div>
+</div>
 @if(Auth::check())
     <div class="auth-success">
         <h1>Witamy, {{ Auth::user()->login }}!</h1>
@@ -85,6 +128,10 @@
         }, 4000);
     </script>
 @endif
+<div class="footer">
+    <div class="white-line"></div>
+    <span>Copyright © 2024 Art Invest</span>
+</div>
 <div class="errorParent"></div>
 </body>
 </html>

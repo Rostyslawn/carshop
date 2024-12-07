@@ -2,7 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "start-project": "composer update & php artisan key:generate",
+        "start-project": "composer update --ignore-platform-req=ext-gd & php artisan key:generate",
         "all": "npm-run-all --parallel dev serve",
         "serve": "php artisan serve",
         "start": "npm run build & npm run dev",
