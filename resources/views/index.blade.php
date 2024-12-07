@@ -29,6 +29,7 @@
                         <input type="hidden" name="user" value="{{ Auth::user()->login }}">
                         {{ $product->name }}
                         <div class="price">Cena: {{ $product->price }} EUR</div>
+                        <div class="wholesale">Cena hurtowa: {{ $product->wholesale }} EUR</div>
                         <button type="submit">Kup</button>
                     </form>
                 </div>

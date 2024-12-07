@@ -32,6 +32,7 @@ class ImportController extends Controller
                 'product_id' => $row["A"],
                 'name' => $row["B"],
                 'price' => (float) $row["C"],
+                'wholesale' => (float) $row["D"],
                 'created_at' => now(),
                 'updated_at' => now(),
             ];
