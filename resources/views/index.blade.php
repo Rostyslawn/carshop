@@ -44,7 +44,12 @@
     <div class="admin-panel">
         <h2>Админ возможности</h2>
         <a href="{{ route("createUser") }}" class="create-user">Создать покупателя</a>
-        <a class="import-excel">Импортировать excel</a>
+        <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <label for="file">Импортировать excel:</label>
+            <input type="file" name="file" accept=".xlsx,.xls,.csv" required>
+            <button type="submit">Импортировать</button>
+        </form>
     </div>
 @endif
 @if(Auth::check())

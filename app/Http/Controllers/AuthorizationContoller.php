@@ -12,8 +12,8 @@ class AuthorizationContoller extends Controller
 {
     public function signin(Request $request)
     {
-        $login = $request->login;
-        $password = $request->password;
+        $login = $request->input("login");
+        $password = $request->input("password");
 
         $user = User::where('login', $login)->first();
 
