@@ -12,10 +12,23 @@
 @if(Auth::check())
     <div class="auth-success">
         <h1>Добро пожаловать, {{ Auth::user()->login }}!</h1>
-        <div class="search">
-            <input class="search-input" placeholder="Введите название или айди товара">
-        </div>
+        <form method="GET" action="{{ route('search') }}">
+            <div class="search">
+                <input name="product_id" class="search-input" placeholder="Введите номер товара">
+                <button type="submit">Поиск</button>
+            </div>
+        </form>
     </div>
+    @if(session("products"))
+        <div class="products">
+            @foreach(session("products") as $product)
+                <div class="product">
+                    {{ $product->name }}
+                    <div class="price">Цена: {{ $product->price }} EUR</div>
+                </div>
+            @endforeach
+        </div>
+    @endif
 @else
     <div class="non-auth">
         <h1>Вы не авторизованы.</h1>
