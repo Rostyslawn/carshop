@@ -26,6 +26,6 @@ class AdminPanelController extends Controller
         $user->status = false;
         $user->save();
 
-        return redirect('/')->with('success', 'Пользователь успешно был создан!');
+        return redirect('/')->with('success', 'Użytkownik został utworzony');
     }
 }

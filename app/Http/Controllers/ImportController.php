@@ -17,7 +17,7 @@ class ImportController extends Controller
         ini_set('upload_max_filesize', '50M');
         ini_set('post_max_size', '50M');
 
-        if(!$file) return redirect("/")->with('error', 'Ошибка при обработке файла');
+        if(!$file) return redirect("/")->with('error', 'Błąd podczas przetwarzania pliku');
 
 //        products::query()->delete();
 
@@ -46,6 +46,6 @@ class ImportController extends Controller
             DB::table('products')->insert($products);
         }
 
-        return redirect("/")->with('success', 'Данные успешно импортированы!');
+        return redirect("/")->with('success', 'Dane zostały zaimportowane!');
     }
 }

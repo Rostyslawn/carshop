@@ -14,7 +14,7 @@ class SearchController extends Controller
         $products = products::where("product_id", $product_id)->get();
 
         if($products->isEmpty())
-            return redirect("/")->withErrors(["doesn't exists" => 'Товар не найден']);
+            return redirect("/")->withErrors(["doesn't exists" => 'Nie znaleziono tej pozycji']);
 
         return redirect("/")->with([
             "products" => $products,

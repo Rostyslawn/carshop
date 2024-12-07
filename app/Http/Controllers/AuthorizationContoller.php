@@ -18,16 +18,16 @@ class AuthorizationContoller extends Controller
         $user = User::where('login', $login)->first();
 
         if (!$user || !Hash::check($password, $user->password))
-            return redirect("/")->withErrors(['login' => 'Неправильный логин или пароль.']);
+            return redirect("/")->withErrors(['login' => 'Nieprawidłowy login lub hasło.']);
 
         Auth::login($user);
 
-        return redirect("/")->with("success", "Успешная авторизация");
+        return redirect("/")->with("success", "Udana autoryzacja");
     }
 
     public  function logout()
     {
         Auth::logout();
-        return redirect("/")->with("success", "Вы вышли с аккаунта");
+        return redirect("/")->with("success", "Wylogowano z konta");
     }
 }
