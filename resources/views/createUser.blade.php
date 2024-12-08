@@ -12,9 +12,9 @@
 @if(Auth::user()->status)
     <form method="POST" action="{{ route("createUserRequest") }}">
         @csrf
-        <input placeholder="Введите логин для пользователы" name="login">
-        <input placeholder="Введите пароль" name="password">
-        <button type="submit">Создать</button>
+        <input placeholder="Login" name="login" required>
+        <input placeholder="Hasło" name="password" required>
+        <button type="submit">utworzenie użytkownika</button>
     </form>
 @endif
 </body>
