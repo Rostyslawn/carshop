@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Original Car Parts</title>
-    @vite("resources/scss/index.scss")
+    <link rel="stylesheet" href="{{ asset("scss/index.css") }}">
+{{--    @vite("resources/scss/index.css")--}}
 </head>
 <body>
 <div class="grid-lines">

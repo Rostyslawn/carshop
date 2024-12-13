@@ -4,9 +4,10 @@ form {
     align-items: center;
     justify-content: center;
 
-    * {
-        width: 250px;
-        height: 25px;
-        margin: 15px 0;
-    }
+}
+
+form * {
+    width: 250px;
+    height: 25px;
+    margin: 15px 0;
 }
