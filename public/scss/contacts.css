@@ -5,13 +5,13 @@
     border: 1px solid #FFFFFF1C;
     padding: 20px;
     margin-left: 20%;
+}
 
-    h1 {
-        font-size: 20px;
-    }
+h1 {
+    font-size: 20px;
+}
 
-    h5 {
-        padding: 15px 0;
-        font-weight: 300;
-    }
+h5 {
+    padding: 15px 0;
+    font-weight: 300;
 }

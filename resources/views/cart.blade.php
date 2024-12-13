@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cart</title>
-    @vite('resources/scss/cart.scss')
+    <link rel="stylesheet" href="{{ asset('scss/cart.css') }}">
+{{--    @vite('resources/scss/cart.css')--}}
 </head>
 <body>
 @if(Auth::check() && Auth::user()->status)

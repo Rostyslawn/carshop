@@ -1,0 +1,9 @@
+.products {
+    padding: 50px 250px;
+}
+
+.product {
+    border: 1px solid black;
+    max-width: 300px;
+    padding: 5px;
+}
